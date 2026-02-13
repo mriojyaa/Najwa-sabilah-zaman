@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Cards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-gradient"></div>
+
+    <!-- Start Screen -->
+    <div class="start-screen" id="startScreen">
+        <div class="start-content">
+            <div class="start-icon">🎴</div>
+            <h1>Question Cards</h1>
+            <p class="start-subtitle">Pick a card, any card</p>
+            <button class="start-btn" id="startBtn">Get Started</button>
+        </div>
+    </div>
+
+    <!-- Category Screen -->
+    <div class="category-screen" id="categoryScreen">
+        <div class="category-content">
+            <h2>Choose Category</h2>
+            <p>What kind of questions are you in the mood for?</p>
+            <div class="category-grid">
+                <div class="category-card" data-category="pribadi">
+                    <span class="category-icon">💭</span>
+                    <div class="category-title">Personal</div>
+                    <div class="category-desc">Deep questions about yourself and life experiences</div>
+                </div>
+                <div class="category-card" data-category="hiburan">
+                    <span class="category-icon">🎬</span>
+                    <div class="category-title">Entertainment</div>
+                    <div class="category-desc">Movies, music, games, and everything fun</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div class="container game-screen" id="gameScreen">
+        <button class="back-btn" id="backBtn">← Back to Categories</button>
+        <div class="header">
+            <h1>Question Cards</h1>
+            <p class="header-subtitle">Pick one card. Shuffle for the next round.</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-label">Round</div>
+                <div class="stat-value" id="roundCount">0</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Cards</div>
+                <div class="stat-value" id="totalCards">8</div>
+            </div>
+        </div>
+
+        <div class="cards-area">
+            <div class="cards-grid" id="cardsGrid"></div>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="shuffleBtn">Shuffle</button>
+            <button class="btn" id="resetBtn">Reset Game</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-box">
+            <p class="modal-question" id="modalQuestion"></p>
+            <button class="modal-btn" id="modalClose">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
